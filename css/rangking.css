@@ -1,0 +1,126 @@
+/* ranking 페이지 */
+
+.rangking_content .ranking_container .belt{
+  margin-top: 50px;
+}
+
+
+.rangking_content .sex{
+
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.rangking_content .sex span{
+  padding:5px 40px 5px 40px;
+  background-color:#000000;
+  color:#ffffff;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+
+.rangking_content .ranking_container{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+.rangking_content .ranking_container .table {
+  table-layout:fixed;
+  width:100%;
+  text-align:center;
+  font-size: 14px;
+}
+.rangking_content .ranking_container .table th { 
+  width: 6%;
+  font-weight: 600;
+}
+
+.rangking_content .ranking_container .table .name{
+  width:20%;
+}
+
+.rangking_content .ranking_container .table .gym{
+  width: 40%;
+}
+
+.rangking_content .ranking_container .table .scholl{
+  width: 40%;
+}
+
+
+.rangking_content .ranking_container .table td, .table th {
+  padding:5px;
+  border-top:1px solid #ccc;
+  word-break:break-all;
+  vertical-align: middle;
+  
+}
+
+.rangking_content .ranking_container .table--min {
+  min-width:450px;
+}
+
+.rangking_content .ranking_container .white_belt th{
+    background:#e6e6e6;
+}
+
+.rangking_content .ranking_container .blue_belt th{
+    background:#7cbbff88;
+}
+
+.rangking_content .ranking_container .purple_belt th{
+  background:#ac7cff7c;
+}
+
+
+/*미디어쿼리*/
+
+@media screen and (max-width:767px) {
+
+
+  .heading_container div {
+    font-size: 30px;
+  }
+
+  .heading_container .ranking_heading {
+    font-size: 22px;
+  }
+
+  .slider_section .detail-box p{
+    font-size: 16px;
+  }
+
+  /*랭킹 페이지 ranking_section*/
+  .rangking_content .sex span{
+    padding:5px 27px 5px 27px;
+    background-color:#000000;
+    color:#ffffff;
+    font-weight: 500;
+    border-radius: 10px;
+  }
+
+  .rangking_content .ranking_container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /*normal*/
+
+  .rangking_content .ranking_container .belt {
+    overflow-x:auto;
+  }
+  .rangking_content .ranking_container .table-box {
+    overflow-x:auto;
+  }
+  /*horizontal*/
+  .rangking_content .ranking_container .table--horizontal tr {
+    position:relative;
+  }
