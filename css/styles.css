@@ -10899,6 +10899,7 @@ p {
   }
 }
 header.masthead {
+  height:100vh;
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
