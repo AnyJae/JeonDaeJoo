@@ -11277,6 +11277,11 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 /*===== custom =====*/
+/*poster image*/
+.poster{
+  width:60%;
+}
+
 /* enter-btn */
 .enter-btn {
   border: none;
@@ -11459,5 +11464,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   width: 2rem;
 }
 
-
-
+/**/
+@media (max-width: 768px){
+  .social-box{
+    display: block;
+  }
+  .poster{
+    width: 90%;
+  }
+}
