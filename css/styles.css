@@ -11423,3 +11423,41 @@ section#contact form#contactForm :-ms-input-placeholder {
 .previous-record-btn:active{
   transform: scale(1.15);
 }
+
+/*social account*/
+.social-box{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color:#fff;
+}
+
+.social-box a{
+  text-decoration: none;
+  color: #000;
+}
+
+.social-box a div:hover{
+  background-color: #DF0101;
+  color: #fff;
+}
+
+.social-box a div:active{
+  transform: scale(1.10);
+}
+
+.social-link{
+  margin:3rem;
+  font-size: 1rem;
+  border: 4px solid #DF0101;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.social-link img{
+  width: 2rem;
+}
+
+
+
