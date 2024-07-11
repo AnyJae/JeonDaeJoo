@@ -11279,7 +11279,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 /*===== custom =====*/
 /*poster image*/
 .poster{
-  width:60%;
+  width:80%;
 }
 
 /* enter-btn */
@@ -11484,6 +11484,6 @@ section#contact form#contactForm :-ms-input-placeholder {
     display: block;
   }
   .poster{
-    width: 90%;
+    width: 95%;
   }
 }
