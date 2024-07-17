@@ -11484,6 +11484,17 @@ section#contact form#contactForm :-ms-input-placeholder {
     display: block;
   }
   .poster{
+    display: none;
+  }
+
+  .poster-mobile{
     width: 100%;
+  }
+
+}
+
+@media (min-width: 769px){
+  .poster-mobile{
+    display: none;
   }
 }
