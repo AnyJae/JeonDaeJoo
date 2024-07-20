@@ -11434,7 +11434,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-top:50px;
   /* border: 2px solid rgb(145, 145, 145);*/
   /* border-radius: 20px;  */
-  border-top: 2px dotted rgb(145, 145, 145);
+  border-top: 1px dotted rgb(145, 145, 145);
 }
 
 .staff .title{
@@ -11518,7 +11518,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
 
   .staff{
-    font-size: 12px;
+    font-size: 13px;
+    border: none;
   }
   
   .staff .title{
