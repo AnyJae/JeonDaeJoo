@@ -11429,6 +11429,32 @@ section#contact form#contactForm :-ms-input-placeholder {
   transform: scale(1.15);
 }
 
+/*about*/
+.staff{
+  margin-top:50px;
+  /* border: 2px solid rgb(145, 145, 145);*/
+  /* border-radius: 20px;  */
+  border-top: 2px dotted rgb(145, 145, 145);
+}
+
+.staff .title{
+  margin: 40px;
+  /* text-align: center; */
+}
+
+.staff .info-box{
+  margin-left: 40px;
+}
+
+.staff .info-box div{
+ margin: 20px 0;
+}
+
+.staff .group-name{
+  margin: 0 10px;
+  border-bottom: 2px solid #dc3545;
+}
+
 /*social account*/
 .social-box{
   display: flex;
@@ -11490,6 +11516,31 @@ section#contact form#contactForm :-ms-input-placeholder {
   .poster-mobile{
     width: 100%;
   }
+
+  .staff{
+    font-size: 12px;
+  }
+  
+  .staff .title{
+    text-align: center;
+  }
+  
+  .staff .info-box{
+    margin-left: 0;
+  }
+
+  .staff .info-box div{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .staff .group-name{
+    flex: 0 0 auto;
+    margin-right: 7px;
+    height: 100%;
+  }
+
+  
 
 }
 
