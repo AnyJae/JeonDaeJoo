@@ -11277,14 +11277,12 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 /*===== custom =====*/
-/* .masthead, #main-info, #rangking, #about, #sponsor, #contact{
-
-    font-family: "IBM Plex Sans KR", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-  
-} */
+.masthead, #main-info, #rangking, #about, #sponsor, #contact{
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+}
 
 /*poster image*/
 .poster{
