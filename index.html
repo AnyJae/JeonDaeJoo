@@ -32,6 +32,7 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <!-- Core theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
+        
     </head>
     
     <body id="page-top">
@@ -80,7 +81,7 @@
                   <img class="poster-mobile" src="./assets/img/main-info/poster(2024)(2)_mobile.png">
                   <h3 style="margin-top: 100px">[대회 참가 신청 안내]</h3>
                   <!--@ 대회 안내 텍스트-->
-                  <div style="white-space: pre-line;">
+                  <div class="guide" style="white-space: pre-line;">
                     <div style="color:#dc3545; margin-bottom: 20px;">
                       참가자분들은 “참가 신청 구글 폼” (위 참가 신청 버튼 클릭) 작성과 함께 참가비 입금을 모두 기간 내에 완료해주세요!
                     </div>
@@ -89,6 +90,29 @@
                     ▪ 계체 : 10:00 - 10:30 (이후 상시 계체 가능)
                     ▪ 시합 : 10:30  이후 진행
                     ▪ 장소 : <b>가양레포츠센터 (서울 강서구 양천로61길 101)</b>
+                    </script>
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fc0ff8af6077dcdf4a58ac7fbd375255"></script>
+                    <div id="map">
+                      <script>
+                        var container = document.getElementById('map');
+                        var options = {
+                          center: new kakao.maps.LatLng(37.559970, 126.865563),
+                          level: 5
+                        };
+                        var map = new kakao.maps.Map(container, options);
+                        // 마커가 표시될 위치입니다 
+                        var markerPosition  = new kakao.maps.LatLng(37.559970, 126.865563); 
+
+                        // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                            position: markerPosition
+                        });
+
+                        // 마커가 지도 위에 표시되도록 설정합니다
+                        marker.setMap(map);
+
+                      </script>
+                    </div>
                     <br/><br/>
                     <h5>2. 참가 대상</h5>
                     ▪ 주짓수를 사랑하는 전국 <b>대학(원)생 분들</b>
@@ -526,7 +550,7 @@
                                     <ul class="list-inline">
                                         <li>
                                             <strong>공식 홈페이지: </strong>
-                                            <a href="https://www.rankingdak.com/" target="_blank" rel="noopener noreferrer">
+                                              <a href="https://www.rankingdak.com/" target="_blank" rel="noopener noreferrer">
                                               rankingdak.com</a>
                                         </li>
                                     </ul>
