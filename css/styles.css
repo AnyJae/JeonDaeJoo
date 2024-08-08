@@ -11396,8 +11396,14 @@ header.masthead .masthead-heading {
   opacity: 0.3;
 }
 
+.sponsor-modal .detail-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .sponsor-modal .sponsor-card {
-  width: 80%;
+  width: 45%;
 }
 
 .timeline {
