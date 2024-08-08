@@ -11396,6 +11396,10 @@ header.masthead .masthead-heading {
   opacity: 0.3;
 }
 
+.sponsor-modal .sponsor-logo {
+  width: 50%;
+}
+
 .sponsor-modal .detail-info {
   display: flex;
   justify-content: center;
@@ -11966,6 +11970,15 @@ section#contact form#contactForm :-ms-input-placeholder {
     flex: 0 0 auto;
     margin-right: 7px;
     height: 100%;
+  }
+
+  .sponsor-modal .modal-content h2,
+  .sponsor-modal .modal-content .h2 {
+    font-size: 2.5rem;
+  }
+
+  .sponsor-modal .sponsor-logo {
+    width: 90%;
   }
 
   .sponsor-modal .sponsor-card {
