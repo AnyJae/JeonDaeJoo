@@ -11765,6 +11765,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: block;
 }
 
+.notice .match-table {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
 .guide {
   display: flex;
   flex-direction: column;
@@ -12012,6 +12017,10 @@ section#contact form#contactForm :-ms-input-placeholder {
 
   .sponsor-modal .sponsor-card {
     width: 100%;
+  }
+
+  .notice .match-table {
+    font-size: 1rem;
   }
 }
 
