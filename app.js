@@ -4,11 +4,11 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
-const pug = require('pug');
 
 const indexRouter =  require('./routes');
 const adminRouter = require('./routes/admin');
 const authRouter = require('./routes/auth');
+const galleryRouter = require('./routes/gallery');
 const app = express();
 
 
@@ -35,6 +35,7 @@ app.use(flash());
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/admin', adminRouter);
+app.use('/gallery', galleryRouter);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
