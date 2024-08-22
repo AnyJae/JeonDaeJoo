@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+    .container
+      h1 Error #{error.status || 500}
+      p.message #{error.message || "An unexpected error occurred."}
+      
+      if error.status === 404
+        p The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+      else
+        p Something went wrong on our end. Please try again later.
+
+      a(href="/") Back to Home

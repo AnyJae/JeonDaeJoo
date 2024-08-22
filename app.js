@@ -4,13 +4,17 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
+const pug = require('pug');
 
 const indexRouter =  require('./routes');
-// const adminRouter = require('./routes/admin');
+const adminRouter = require('./routes/admin');
+const authRouter = require('./routes/auth');
 const app = express();
 
 
 app.set('port', process.env.PORT || 8001);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -29,7 +33,8 @@ app.use(session({
 app.use(flash());
 
 app.use('/', indexRouter);
-// app.use('/admin', adminRouter);
+app.use('/auth', authRouter);
+app.use('/admin', adminRouter);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');

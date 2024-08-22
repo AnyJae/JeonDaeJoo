@@ -1,64 +1,27 @@
+//관리자 로그인을 위한 router
 const express = require('express');
-const passport = require('passport');
-const bcrypt = require('bcrypt');
-const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { User } = require('../models');
+const path = require('path');
 
 const router = express.Router();
+require('dotenv').config();
 
-router.post('/join', isNotLoggedIn, async (req, res, next) => {
-  const { email, nick, password } = req.body;
-  try {
-    const exUser = await User.findOne({ where: { email } });
-    if (exUser) {
-      req.flash('joinError', '이미 가입된 이메일입니다.');
-      return res.redirect('/join');
-    }
-    const hash = await bcrypt.hash(password, 12);
-    await User.create({
-      email,
-      nick,
-      password: hash,
-    });
-    return res.redirect('/');
-  } catch (error) {
-    console.error(error);
-    return next(error);
+// 환경 변수에서 관리자 자격 증명 로드
+const ADMIN_ID = process.env.ADMIN_ID;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'auth.html'));
+});
+
+router.post('/', (req, res) => {
+  const { username, password } = req.body;
+
+  if (username === ADMIN_ID && password === ADMIN_PASSWORD) {
+    req.session.admin = true;  // 세션에 관리자 정보 저장
+    return res.redirect('/admin');  // 로그인 성공 시 관리자 페이지로 리다이렉트
+  } else {
+    return res.status(401).send('아이디 또는 비밀번호가 잘못되었습니다.');
   }
-});
-
-router.post('/login', isNotLoggedIn, (req, res, next) => {
-  passport.authenticate('local', (authError, user, info) => {
-    if (authError) {
-      console.error(authError);
-      return next(authError);
-    }
-    if (!user) {
-      req.flash('loginError', info.message);
-      return res.redirect('/');
-    }
-    return req.login(user, (loginError) => {
-      if (loginError) {
-        console.error(loginError);
-        return next(loginError);
-      }
-      return res.redirect('/');
-    });
-  })(req, res, next); // 미들웨어 내의 미들웨어에는 (req, res, next)를 붙입니다.
-});
-
-router.get('/logout', isLoggedIn, (req, res, next) => {
-    req.logout((err) => {
-        if (err) {
-            return next(err);
-        }
-        req.session.destroy((err) => {
-            if (err) {
-                return next(err);
-            }
-            res.redirect('/');
-        });
-    });
 });
 
 module.exports = router;
