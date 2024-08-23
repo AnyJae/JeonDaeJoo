@@ -1,0 +1,29 @@
+/* 업로드된 이미지의 스타일 */
+.uploaded-image {
+    width: 100px;  /* 이미지의 너비를 100px로 설정 */
+    height: 100px; /* 이미지의 높이를 100px로 설정 */
+    object-fit: cover; /* 이미지의 비율을 유지하면서 크기를 맞춤 */
+    margin: 5px; /* 이미지 간 간격 */
+}
+
+/* 이미지 삭제 버튼의 스타일 */
+.image-item {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.image-item button {
+    display: block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.image-item button:hover {
+    background-color: #d32f2f;
+}
