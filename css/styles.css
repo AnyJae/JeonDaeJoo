@@ -11286,6 +11286,15 @@ header.masthead .masthead-heading {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+
+header .masthead-completion p{
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+
+
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 17rem;
@@ -11303,6 +11312,7 @@ header.masthead .masthead-heading {
     line-height: 4.5rem;
     margin-bottom: 4rem;
   }
+
 }
 #sponsor .sponsor-item {
   max-width: 26rem;
@@ -11776,6 +11786,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   align-items: center;
 }
 
+.guide h5{
+  margin-top: 4rem;
+}
+
+
 #map {
   margin-top: 20px;
   width: 600px;
@@ -11798,6 +11813,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /*gallery-btn*/
 .gallery-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   background: #df0101;
   color: #fff;
   border: none;
@@ -11810,7 +11828,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   outline: none;
 }
 .gallery-btn:hover {
-  background: #fff;
+  background: #fff0;
   color: #df0101;
 }
 .gallery-btn:before,
@@ -11839,6 +11857,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 .gallery-btn:active {
   transform: scale(1.15);
 }
+
 
 /*previous-record-btn*/
 .previous-record-btn {
@@ -11960,6 +11979,11 @@ section#contact form#contactForm :-ms-input-placeholder {
 
   .masthead .name {
     font-size: 2.2rem !important;
+  }
+
+  header .masthead-completion p{
+    font-size: 1rem;
+    margin: 0;
   }
 
   .notice {
